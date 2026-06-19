@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Brand eCommerce</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Header (reused from index) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo" onclick="window.location='index.html'" style="cursor:pointer">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+                </svg>
+                Brand
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for items...">
+                <button type="button">Search</button>
+            </div>
+            <div class="header-actions">
+                <div class="action-item"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>Profile</div>
+                <div class="action-item"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H5.17L4 17.17V4h14v12z"/></svg>Message</div>
+                <div class="action-item"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Orders</div>
+                <div class="action-item"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>My cart</div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-link">All category</a>
+            <a href="#" class="nav-link">Hot offers</a>
+            <a href="#" class="nav-link">Gift boxes</a>
+            <a href="#" class="nav-link">Projects</a>
+            <a href="#" class="nav-link">Menu item</a>
+            <a href="#" class="nav-link">Help</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Breadcrumb mock -->
+        <div style="padding: 20px 0; color: var(--text-light); font-size: 14px;">
+            Home > Clothings > Men's wear > Summer clothing
+        </div>
+
+        <div class="products-page">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="filter-group">
+                    <div class="filter-title">Category <span>&#9650;</span></div>
+                    <div class="filter-list">
+                        <label class="filter-item"><input type="checkbox"> Mobile accessory</label>
+                        <label class="filter-item"><input type="checkbox"> Electronics</label>
+                        <label class="filter-item"><input type="checkbox"> Smartphones</label>
+                        <label class="filter-item"><input type="checkbox"> Modern tech</label>
+                        <a href="#" style="color:var(--primary-color); font-size:14px; margin-top:5px;">See all</a>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-title">Brands <span>&#9650;</span></div>
+                    <div class="filter-list">
+                        <label class="filter-item"><input type="checkbox"> Samsung</label>
+                        <label class="filter-item"><input type="checkbox"> Apple</label>
+                        <label class="filter-item"><input type="checkbox"> Huawei</label>
+                        <label class="filter-item"><input type="checkbox"> Pocco</label>
+                        <label class="filter-item"><input type="checkbox"> Lenovo</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-title">Price range <span>&#9650;</span></div>
+                    <div class="price-inputs">
+                        <input type="number" placeholder="Min" value="0">
+                        <span>-</span>
+                        <input type="number" placeholder="Max" value="9999">
+                    </div>
+                    <button class="apply-btn">Apply</button>
+                </div>
+            </aside>
+
+            <!-- Products Grid -->
+            <section class="products-content">
+                <div class="products-header">
+                    <div class="products-count">12,911 items in <strong>Mobile accessory</strong></div>
+                    <div class="products-sort">
+                        <label style="margin-right: 10px;"><input type="checkbox" checked> Verified only</label>
+                        <select>
+                            <option>Featured</option>
+                            <option>Newest</option>
+                            <option>Price: Low to High</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image" onclick="window.location='product-detail.html'">
+                            <div style="font-size: 80px;">📱</div>
+                            <div class="like-btn">♡</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-price-row">
+                                <span class="product-price">$998.00</span>
+                                <span class="product-old-price">$1128.00</span>
+                            </div>
+                            <div class="product-rating">
+                                ★★★★★ <span>7.5 • 154 orders</span>
+                            </div>
+                            <div class="product-title" onclick="window.location='product-detail.html'">Canon Cmera EOS 2000, Black 10x zoom</div>
+                            <div class="product-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</div>
+                            <div class="product-link" onclick="window.location='product-detail.html'">View details</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image" onclick="window.location='product-detail.html'">
+                            <div style="font-size: 80px;">📷</div>
+                            <div class="like-btn">♡</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-price-row">
+                                <span class="product-price">$998.00</span>
+                            </div>
+                            <div class="product-rating">
+                                ★★★★★ <span>7.5 • 154 orders</span>
+                            </div>
+                            <div class="product-title" onclick="window.location='product-detail.html'">GoPro HERO6 4K Action Camera - Black</div>
+                            <div class="product-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</div>
+                            <div class="product-link" onclick="window.location='product-detail.html'">View details</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image" onclick="window.location='product-detail.html'">
+                            <div style="font-size: 80px;">🎧</div>
+                            <div class="like-btn">♡</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-price-row">
+                                <span class="product-price">$998.00</span>
+                            </div>
+                            <div class="product-rating">
+                                ★★★★★ <span>7.5 • 154 orders</span>
+                            </div>
+                            <div class="product-title" onclick="window.location='product-detail.html'">Sony Noise Cancelling Headphones - White</div>
+                            <div class="product-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</div>
+                            <div class="product-link" onclick="window.location='product-detail.html'">View details</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image" onclick="window.location='product-detail.html'">
+                            <div style="font-size: 80px;">💻</div>
+                            <div class="like-btn">♡</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-price-row">
+                                <span class="product-price">$998.00</span>
+                            </div>
+                            <div class="product-rating">
+                                ★★★★★ <span>7.5 • 154 orders</span>
+                            </div>
+                            <div class="product-title" onclick="window.location='product-detail.html'">Apple MacBook Pro 13" M1 Chip</div>
+                            <div class="product-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</div>
+                            <div class="product-link" onclick="window.location='product-detail.html'">View details</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button class="page-btn">&lt;</button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">&gt;</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Brand</h3>
+                    <p>Best information about the company goes here but now lorem ipsum is used to demonstrate structure.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Ecommerce. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

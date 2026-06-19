@@ -1,0 +1,228 @@
+/* Global CSS Variables & Reset */
+:root {
+  --primary-color: #0066ff;
+  --primary-hover: #0052cc;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --bg-light: #f5f5f5;
+  --white: #ffffff;
+  --border-color: #e0e0e0;
+  --danger: #ff4d4f;
+  --success: #52c41a;
+  --font-family: 'Inter', 'Roboto', sans-serif;
+  --container-width: 1200px;
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-speed) ease;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================================
+   HEADER STYLES
+   ========================================= */
+.header {
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px 0;
+  background-color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-bar button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color var(--transition-speed);
+}
+
+.search-bar button:hover {
+  background-color: var(--primary-hover);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.action-item svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  fill: var(--text-light);
+}
+
+.action-item:hover, .action-item:hover svg {
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+/* Navbar below main header */
+.navbar {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 0;
+}
+
+.navbar .container {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 15px;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* =========================================
+   FOOTER STYLES
+   ========================================= */
+.footer {
+  background-color: var(--bg-light);
+  border-top: 1px solid var(--border-color);
+  padding: 50px 0 20px;
+  margin-top: 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-brand h3 {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #ccc;
+  border-radius: 50%;
+  color: white;
+}
+
+.social-icons a:hover {
+  background-color: var(--primary-color);
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-light);
+  font-size: 14px;
+}

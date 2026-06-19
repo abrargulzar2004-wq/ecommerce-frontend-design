@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Brand eCommerce</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo" onclick="window.location='index.html'" style="cursor:pointer">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+                </svg>
+                Brand
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for items...">
+                <button type="button" id="searchBtn">Search</button>
+            </div>
+            <div class="header-actions">
+                <div class="action-item"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>Profile</div>
+                <div class="action-item"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H5.17L4 17.17V4h14v12z"/></svg>Message</div>
+                <div class="action-item"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Orders</div>
+                <div class="action-item"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>My cart</div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-link">All category</a>
+            <a href="#" class="nav-link">Hot offers</a>
+            <a href="#" class="nav-link">Gift boxes</a>
+            <a href="#" class="nav-link">Projects</a>
+            <a href="#" class="nav-link">Menu item</a>
+            <a href="#" class="nav-link">Help</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Breadcrumb mock -->
+        <div style="padding: 20px 0; color: var(--text-light); font-size: 14px;">
+            Home > Clothings > Men's wear > Mens Long Sleeve T-shirt
+        </div>
+
+        <div class="product-detail-page">
+            <!-- Gallery -->
+            <div class="product-gallery">
+                <div class="main-image" id="mainImage">
+                    👕
+                </div>
+                <div class="thumbnail-list">
+                    <div class="thumbnail active" onclick="changeImage(this, '👕')">👕</div>
+                    <div class="thumbnail" onclick="changeImage(this, '👕 (Blue)')">👕</div>
+                    <div class="thumbnail" onclick="changeImage(this, '👕 (Red)')">👕</div>
+                    <div class="thumbnail" onclick="changeImage(this, '👕 (Back)')">👕</div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info-block">
+                <div class="brand-name">In stock</div>
+                <h1 class="detail-title">Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</h1>
+                <div class="detail-rating">
+                    ★★★★★ <span>9.3 • 32 reviews • 154 sold</span>
+                </div>
+                
+                <div class="detail-price-box">
+                    <div class="detail-price">$98.00 <span class="detail-old-price">$120.00</span></div>
+                    <div style="font-size: 14px; margin-top: 5px;">50-100 pcs</div>
+                </div>
+
+                <div class="options-group">
+                    <span class="options-label">Color:</span>
+                    <div class="custom-dropdown" id="colorDropdown">
+                        <button class="dropdown-toggle" id="colorToggle">
+                            <span id="selectedColor">Select Color</span>
+                            <span>&#9662;</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item" onclick="selectOption('color', 'Grey')">Grey</div>
+                            <div class="dropdown-item" onclick="selectOption('color', 'Blue')">Blue</div>
+                            <div class="dropdown-item" onclick="selectOption('color', 'Black')">Black</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="options-group">
+                    <span class="options-label">Size:</span>
+                    <div class="custom-dropdown" id="sizeDropdown">
+                        <button class="dropdown-toggle" id="sizeToggle">
+                            <span id="selectedSize">Select Size</span>
+                            <span>&#9662;</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item" onclick="selectOption('size', 'Small')">Small</div>
+                            <div class="dropdown-item" onclick="selectOption('size', 'Medium')">Medium</div>
+                            <div class="dropdown-item" onclick="selectOption('size', 'Large')">Large</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="options-group">
+                    <span class="options-label">Quantity:</span>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQty(-1)">-</button>
+                        <input type="text" class="quantity-input" id="qtyInput" value="1" readonly>
+                        <button class="quantity-btn" onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="detail-actions">
+                    <button class="btn-primary" onclick="alert('Added to cart!')">Send inquiry</button>
+                    <button class="btn-secondary" onclick="alert('Saved for later!')">♡ Save for later</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Description Tabs -->
+        <div class="detail-tabs">
+            <div class="tabs-header">
+                <button class="tab-btn active">Description</button>
+                <button class="tab-btn">Reviews</button>
+                <button class="tab-btn">Shipping</button>
+                <button class="tab-btn">About seller</button>
+            </div>
+            <div class="tab-content">
+                <p style="margin-bottom: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-light);">
+                    <li>Some great feature name here</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur</li>
+                    <li>Duis aute irure dolor in reprehenderit</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Brand</h3>
+                    <p>Best information about the company goes here.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

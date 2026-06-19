@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand eCommerce</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+                </svg>
+                Brand
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search for items...">
+                <button type="button">Search</button>
+            </div>
+
+            <!-- User Actions -->
+            <div class="header-actions">
+                <div class="action-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    Profile
+                </div>
+                <div class="action-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H5.17L4 17.17V4h14v12z"/>
+                    </svg>
+                    Message
+                </div>
+                <div class="action-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    Orders
+                </div>
+                <div class="action-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                    </svg>
+                    My cart
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-link">All category</a>
+            <a href="#" class="nav-link">Hot offers</a>
+            <a href="#" class="nav-link">Gift boxes</a>
+            <a href="#" class="nav-link">Projects</a>
+            <a href="#" class="nav-link">Menu item</a>
+            <a href="#" class="nav-link">Help</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-subtitle">Latest trending</p>
+                    <h1 class="hero-title">Electronic items<br>and Gadgets</h1>
+                    <a href="products.html" class="hero-btn">Learn more</a>
+                </div>
+                <div class="hero-image">
+                    <div class="placeholder-img">Hero Image Placement</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="categories-section container">
+            <div class="section-header">
+                <h2 class="section-title">Home and outdoor</h2>
+                <a href="products.html" class="section-link">Source now &rarr;</a>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" onclick="window.location='products.html'">
+                    <div class="category-icon">🪑</div>
+                    <div class="category-name">Soft chairs</div>
+                    <div style="color:var(--text-light); font-size:12px">From USD 19</div>
+                </div>
+                <div class="category-card" onclick="window.location='products.html'">
+                    <div class="category-icon">🛋️</div>
+                    <div class="category-name">Sofa &amp; chair</div>
+                    <div style="color:var(--text-light); font-size:12px">From USD 19</div>
+                </div>
+                <div class="category-card" onclick="window.location='products.html'">
+                    <div class="category-icon">🍽️</div>
+                    <div class="category-name">Kitchen dishes</div>
+                    <div style="color:var(--text-light); font-size:12px">From USD 19</div>
+                </div>
+                <div class="category-card" onclick="window.location='products.html'">
+                    <div class="category-icon">⌚</div>
+                    <div class="category-name">Smart watches</div>
+                    <div style="color:var(--text-light); font-size:12px">From USD 19</div>
+                </div>
+                <div class="category-card" onclick="window.location='products.html'">
+                    <div class="category-icon">🎛️</div>
+                    <div class="category-name">Kitchen mixer</div>
+                    <div style="color:var(--text-light); font-size:12px">From USD 100</div>
+                </div>
+                <div class="category-card" onclick="window.location='products.html'">
+                    <div class="category-icon">🥤</div>
+                    <div class="category-name">Blenders</div>
+                    <div style="color:var(--text-light); font-size:12px">From USD 39</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Items -->
+        <section class="promotional-section container">
+            <div class="section-header">
+                <h2 class="section-title">Recommended items</h2>
+            </div>
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card" onclick="window.location='product-detail.html'">
+                    <div class="product-image">
+                        <div style="font-size: 60px;">👕</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-price">$10.30</div>
+                        <div class="product-title">T-shirts with multiple colors, for men</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card" onclick="window.location='product-detail.html'">
+                    <div class="product-image">
+                        <div style="font-size: 60px;">🧥</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-price">$12.50</div>
+                        <div class="product-title">Brown winter coat medium size</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card" onclick="window.location='product-detail.html'">
+                    <div class="product-image">
+                        <div style="font-size: 60px;">🎒</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-price">$34.00</div>
+                        <div class="product-title">Jeans bag for travel for men</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card" onclick="window.location='product-detail.html'">
+                    <div class="product-image">
+                        <div style="font-size: 60px;">💼</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-price">$99.00</div>
+                        <div class="product-title">Leather wallet</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="product-card" onclick="window.location='product-detail.html'">
+                    <div class="product-image">
+                        <div style="font-size: 60px;">📷</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-price">$9.99</div>
+                        <div class="product-title">Canon camera black, 100x zoom</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Col -->
+                <div class="footer-brand">
+                    <h3>Brand</h3>
+                    <p>Best information about the company goes here but now lorem ipsum is used to demonstrate structure.</p>
+                    <div class="social-icons">
+                        <a href="#">F</a>
+                        <a href="#">T</a>
+                        <a href="#">L</a>
+                        <a href="#">I</a>
+                    </div>
+                </div>
+                
+                <!-- Links Col -->
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Find store</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Col -->
+                <div class="footer-col">
+                    <h4>Partnership</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Find store</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Col -->
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Money Refund</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Col -->
+                <div class="footer-col">
+                    <h4>For users</h4>
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">My Orders</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                &copy; 2026 Ecommerce. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
