@@ -3,71 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand eCommerce</title>
+    <title>Brand eCommerce - Home</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Main Header -->
-    <header class="header">
-        <div class="container">
-            <!-- Logo -->
-            <div class="logo">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
-                </svg>
-                Brand
-            </div>
+    <div class="header-wrapper">
+        <!-- Main Header --> 
+        <header class="header">
+            <div class="container">
+                <div class="mobile-menu-toggle" id="mobileMenuBtn">☰</div>
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24">
+                        <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+                    </svg>
+                    Brand
+                </a>
 
-            <!-- Search Bar -->
-            <div class="search-bar">
-                <input type="text" placeholder="Search for items...">
-                <button type="button">Search</button>
-            </div>
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for items...">
+                    <button type="button" id="searchBtn">Search</button>
+                </div>
 
-            <!-- User Actions -->
-            <div class="header-actions">
-                <div class="action-item">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                    Profile
-                </div>
-                <div class="action-item">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H5.17L4 17.17V4h14v12z"/>
-                    </svg>
-                    Message
-                </div>
-                <div class="action-item">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                    </svg>
-                    Orders
-                </div>
-                <div class="action-item">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
-                    </svg>
-                    My cart
+                <!-- User Actions -->
+                <div class="header-actions">
+                    <a href="#" class="action-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#" class="action-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H5.17L4 17.17V4h14v12z"/></svg>
+                        <span>Message</span>
+                    </a>
+                    <a href="cart.html" class="action-item">
+                        <div style="position: relative;">
+                            <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                            <span class="cart-badge">3</span>
+                        </div>
+                        <span>My cart</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="nav-link">All category</a>
-            <a href="#" class="nav-link">Hot offers</a>
-            <a href="#" class="nav-link">Gift boxes</a>
-            <a href="#" class="nav-link">Projects</a>
-            <a href="#" class="nav-link">Menu item</a>
-            <a href="#" class="nav-link">Help</a>
-        </div>
-    </nav>
+        <!-- Navigation Bar -->
+        <nav class="navbar" id="mainNav">
+            <div class="container">
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="products.html" class="nav-link">Hot offers</a>
+                <a href="products.html" class="nav-link">Gift boxes</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+                <a href="#" class="nav-link">Help Center</a>
+            </div>
+        </nav>
+    </div>
 
     <!-- Main Content -->
     <main>
@@ -77,10 +71,10 @@
                 <div class="hero-content">
                     <p class="hero-subtitle">Latest trending</p>
                     <h1 class="hero-title">Electronic items<br>and Gadgets</h1>
-                    <a href="products.html" class="hero-btn">Learn more</a>
+                    <a href="products.html" class="hero-btn">Shop Now</a>
                 </div>
                 <div class="hero-image">
-                    <div class="placeholder-img">Hero Image Placement</div>
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80" alt="Modern Tech and Gadgets" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
                 </div>
             </div>
         </section>
@@ -89,39 +83,39 @@
         <section class="categories-section container">
             <div class="section-header">
                 <h2 class="section-title">Home and outdoor</h2>
-                <a href="products.html" class="section-link">Source now &rarr;</a>
+                <a href="categories.html" class="section-link">View All Categories &rarr;</a>
             </div>
             <div class="categories-grid">
-                <div class="category-card" onclick="window.location='products.html'">
-                    <div class="category-icon">🪑</div>
+                <a href="products.html" class="category-card">
+                    <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?w=200&q=80" alt="Chairs"></div>
                     <div class="category-name">Soft chairs</div>
-                    <div style="color:var(--text-light); font-size:12px">From USD 19</div>
-                </div>
-                <div class="category-card" onclick="window.location='products.html'">
-                    <div class="category-icon">🛋️</div>
+                    <div style="color:var(--text-light); font-size:16px">From USD 19</div>
+                </a>
+                <a href="products.html" class="category-card">
+                    <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&q=80" alt="Sofa"></div>
                     <div class="category-name">Sofa &amp; chair</div>
-                    <div style="color:var(--text-light); font-size:12px">From USD 19</div>
-                </div>
-                <div class="category-card" onclick="window.location='products.html'">
-                    <div class="category-icon">🍽️</div>
+                    <div style="color:var(--text-light); font-size:16px">From USD 19</div>
+                </a>
+                <a href="products.html" class="category-card">
+                    <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=200&q=80" alt="Dishes"></div>
                     <div class="category-name">Kitchen dishes</div>
-                    <div style="color:var(--text-light); font-size:12px">From USD 19</div>
-                </div>
-                <div class="category-card" onclick="window.location='products.html'">
-                    <div class="category-icon">⌚</div>
+                    <div style="color:var(--text-light); font-size:16px">From USD 19</div>
+                </a>
+                <a href="products.html" class="category-card">
+                    <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&q=80" alt="Watches"></div>
                     <div class="category-name">Smart watches</div>
-                    <div style="color:var(--text-light); font-size:12px">From USD 19</div>
-                </div>
-                <div class="category-card" onclick="window.location='products.html'">
-                    <div class="category-icon">🎛️</div>
-                    <div class="category-name">Kitchen mixer</div>
-                    <div style="color:var(--text-light); font-size:12px">From USD 100</div>
-                </div>
-                <div class="category-card" onclick="window.location='products.html'">
-                    <div class="category-icon">🥤</div>
-                    <div class="category-name">Blenders</div>
-                    <div style="color:var(--text-light); font-size:12px">From USD 39</div>
-                </div>
+                    <div style="color:var(--text-light); font-size:16px">From USD 19</div>
+                </a>
+                <a href="products.html" class="category-card">
+                    <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1585515320310-259814833e62?w=200&q=80" alt="Mixer"></div>
+                    <div class="category-name">Kitchen appliances</div>
+                    <div style="color:var(--text-light); font-size:16px">From USD 39</div>
+                </a>
+                <a href="products.html" class="category-card">
+                    <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1610824352934-c10d87b700cc?w=200&q=80" alt="Decor"></div>
+                    <div class="category-name">Home decor</div>
+                    <div style="color:var(--text-light); font-size:16px">From USD 25</div>
+                </a>
             </div>
         </section>
 
@@ -132,58 +126,147 @@
             </div>
             <div class="product-grid">
                 <!-- Product Card 1 -->
-                <div class="product-card" onclick="window.location='product-detail.html'">
-                    <div class="product-image">
-                        <div style="font-size: 60px;">👕</div>
-                    </div>
+                <div class="product-card" data-id="1" data-name="Premium Cotton T-Shirt" data-price="10.30" data-img="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&q=80" alt="T-shirt">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
                     <div class="product-info">
                         <div class="product-price">$10.30</div>
-                        <div class="product-title">T-shirts with multiple colors, for men</div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <a href="product-detail.html" class="product-title">Premium Cotton T-Shirt</a>
+                        <button class="add-to-cart-btn" onclick="addToCart('1')">Add to Cart</button>
                     </div>
                 </div>
                 <!-- Product Card 2 -->
-                <div class="product-card" onclick="window.location='product-detail.html'">
-                    <div class="product-image">
-                        <div style="font-size: 60px;">🧥</div>
-                    </div>
+                <div class="product-card" data-id="2" data-name="Brown Winter Coat" data-price="120.50" data-img="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&q=80" alt="Coat">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
                     <div class="product-info">
-                        <div class="product-price">$12.50</div>
-                        <div class="product-title">Brown winter coat medium size</div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <div class="product-price">$120.50</div>
+                        <a href="product-detail.html" class="product-title">Brown Winter Coat</a>
+                        <button class="add-to-cart-btn" onclick="addToCart('2')">Add to Cart</button>
                     </div>
                 </div>
                 <!-- Product Card 3 -->
-                <div class="product-card" onclick="window.location='product-detail.html'">
-                    <div class="product-image">
-                        <div style="font-size: 60px;">🎒</div>
-                    </div>
+                <div class="product-card" data-id="3" data-name="Canvas Travel Bag" data-price="34.00" data-img="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&q=80" alt="Bag">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
                     <div class="product-info">
                         <div class="product-price">$34.00</div>
-                        <div class="product-title">Jeans bag for travel for men</div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <a href="product-detail.html" class="product-title">Canvas Travel Bag</a>
+                        <button class="add-to-cart-btn" onclick="addToCart('3')">Add to Cart</button>
                     </div>
                 </div>
                 <!-- Product Card 4 -->
-                <div class="product-card" onclick="window.location='product-detail.html'">
-                    <div class="product-image">
-                        <div style="font-size: 60px;">💼</div>
-                    </div>
+                <div class="product-card" data-id="4" data-name="Leather Men's Wallet" data-price="99.00" data-img="https://images.unsplash.com/photo-1627123424574-724758594e93?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=300&q=80" alt="Wallet">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
                     <div class="product-info">
                         <div class="product-price">$99.00</div>
-                        <div class="product-title">Leather wallet</div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <a href="product-detail.html" class="product-title">Leather Men's Wallet</a>
+                        <button class="add-to-cart-btn" onclick="addToCart('4')">Add to Cart</button>
                     </div>
                 </div>
                 <!-- Product Card 5 -->
-                <div class="product-card" onclick="window.location='product-detail.html'">
-                    <div class="product-image">
-                        <div style="font-size: 60px;">📷</div>
-                    </div>
+                <div class="product-card" data-id="5" data-name="Professional DSLR Camera" data-price="1299.99" data-img="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=300&q=80" alt="Camera">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
                     <div class="product-info">
-                        <div class="product-price">$9.99</div>
-                        <div class="product-title">Canon camera black, 100x zoom</div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <div class="product-price">$1299.99</div>
+                        <a href="product-detail.html" class="product-title">Professional DSLR Camera</a>
+                        <button class="add-to-cart-btn" onclick="addToCart('5')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="product-card" data-id="6" data-name="Wireless Headphones" data-price="299.00" data-img="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=300&q=80" alt="Headphones">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
+                    <div class="product-info">
+                        <div class="product-price">$299.00</div>
+                        <a href="product-detail.html" class="product-title">Wireless Headphones</a>
+                        <button class="add-to-cart-btn" onclick="addToCart('6')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 7 -->
+                <div class="product-card" data-id="7" data-name="Smart Watch Series 7" data-price="399.00" data-img="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300&q=80" alt="Smart Watch">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
+                    <div class="product-info">
+                        <div class="product-price">$399.00</div>
+                        <a href="product-detail.html" class="product-title">Smart Watch Series 7</a>
+                        <button class="add-to-cart-btn" onclick="addToCart('7')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 8 -->
+                <div class="product-card" data-id="8" data-name="Minimalist Desk Lamp" data-price="45.00" data-img="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=300&q=80" alt="Desk Lamp">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
+                    <div class="product-info">
+                        <div class="product-price">$45.00</div>
+                        <a href="product-detail.html" class="product-title">Minimalist Desk Lamp</a>
+                        <button class="add-to-cart-btn" onclick="addToCart('8')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 13 -->
+                <div class="product-card" data-id="13" data-name="Vibrant Yellow Sneakers" data-price="110.00" data-img="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&q=80" alt="Sneakers">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
+                    <div class="product-info">
+                        <div class="product-price">$110.00</div>
+                        <a href="product-detail.html" class="product-title">Vibrant Yellow Sneakers</a>
+                        <button class="add-to-cart-btn" onclick="addToCart('13')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 14 -->
+                <div class="product-card" data-id="14" data-name="Colorful Urban Backpack" data-price="45.00" data-img="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&q=80" alt="Backpack">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
+                    <div class="product-info">
+                        <div class="product-price">$45.00</div>
+                        <a href="product-detail.html" class="product-title">Colorful Urban Backpack</a>
+                        <button class="add-to-cart-btn" onclick="addToCart('14')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 15 -->
+                <div class="product-card" data-id="15" data-name="Classic Leather Watch" data-price="199.00" data-img="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=300&q=80" alt="Watch">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
+                    <div class="product-info">
+                        <div class="product-price">$199.00</div>
+                        <a href="product-detail.html" class="product-title">Classic Leather Watch</a>
+                        <button class="add-to-cart-btn" onclick="addToCart('15')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 16 -->
+                <div class="product-card" data-id="16" data-name="Bright Morning Coffee Mug" data-price="15.00" data-img="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=300&q=80" alt="Mug">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
+                    <div class="product-info">
+                        <div class="product-price">$15.00</div>
+                        <a href="product-detail.html" class="product-title">Bright Morning Coffee Mug</a>
+                        <button class="add-to-cart-btn" onclick="addToCart('16')">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -196,24 +279,29 @@
             <div class="footer-grid">
                 <!-- Brand Col -->
                 <div class="footer-brand">
-                    <h3>Brand</h3>
-                    <p>Best information about the company goes here but now lorem ipsum is used to demonstrate structure.</p>
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+                        </svg>
+                        Brand
+                    </h3>
+                    <p>We provide the best products from top suppliers directly to your door. Experience modern shopping today.</p>
                     <div class="social-icons">
                         <a href="#">F</a>
                         <a href="#">T</a>
-                        <a href="#">L</a>
                         <a href="#">I</a>
                     </div>
                 </div>
                 
                 <!-- Links Col -->
                 <div class="footer-col">
-                    <h4>About</h4>
+                    <h4>About Us</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Find store</a></li>
-                        <li><a href="#">Categories</a></li>
-                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
                     </ul>
                 </div>
 
@@ -221,38 +309,37 @@
                 <div class="footer-col">
                     <h4>Partnership</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Find store</a></li>
-                        <li><a href="#">Categories</a></li>
-                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Sell on Brand</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Influencer Network</a></li>
                     </ul>
                 </div>
 
                 <!-- Links Col -->
                 <div class="footer-col">
-                    <h4>Information</h4>
+                    <h4>Help Center</h4>
                     <ul>
-                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Money Refund</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">FAQs</a></li>
                     </ul>
                 </div>
 
                 <!-- Links Col -->
                 <div class="footer-col">
-                    <h4>For users</h4>
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">My Orders</a></li>
-                    </ul>
+                    <h4>Newsletter Subscription</h4>
+                    <p style="color:#9ca3af; font-size:16px;">Get daily news on upcoming offers!</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                        <input type="email" placeholder="Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                &copy; 2026 Ecommerce. All rights reserved.
+                &copy; 2026 Brand eCommerce. All rights reserved.
             </div>
         </div>
     </footer>

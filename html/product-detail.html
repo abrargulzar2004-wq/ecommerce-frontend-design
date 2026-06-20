@@ -3,78 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail - Brand eCommerce</title>
+    <title>Brand eCommerce - Product Detail</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/detail.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Main Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo" onclick="window.location='index.html'" style="cursor:pointer">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
-                </svg>
-                Brand
+    <div class="header-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="mobile-menu-toggle" id="mobileMenuBtn">☰</div>
+                <a href="index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24">
+                        <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+                    </svg>
+                    Brand
+                </a>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for items...">
+                    <button type="button" id="searchBtn">Search</button>
+                </div>
+                <div class="header-actions">
+                    <a href="#" class="action-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#" class="action-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H5.17L4 17.17V4h14v12z"/></svg>
+                        <span>Message</span>
+                    </a>
+                    <a href="cart.html" class="action-item">
+                        <div style="position: relative;">
+                            <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                            <span class="cart-badge">3</span>
+                        </div>
+                        <span>My cart</span>
+                    </a>
+                </div>
             </div>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search for items...">
-                <button type="button" id="searchBtn">Search</button>
-            </div>
-            <div class="header-actions">
-                <div class="action-item"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>Profile</div>
-                <div class="action-item"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H5.17L4 17.17V4h14v12z"/></svg>Message</div>
-                <div class="action-item"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Orders</div>
-                <div class="action-item"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>My cart</div>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="nav-link">All category</a>
-            <a href="#" class="nav-link">Hot offers</a>
-            <a href="#" class="nav-link">Gift boxes</a>
-            <a href="#" class="nav-link">Projects</a>
-            <a href="#" class="nav-link">Menu item</a>
-            <a href="#" class="nav-link">Help</a>
-        </div>
-    </nav>
+        <nav class="navbar" id="mainNav">
+            <div class="container">
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="products.html" class="nav-link">Hot offers</a>
+                <a href="products.html" class="nav-link">Gift boxes</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+                <a href="#" class="nav-link">Help Center</a>
+            </div>
+        </nav>
+    </div>
 
     <!-- Main Content -->
     <main class="container">
-        <!-- Breadcrumb mock -->
+        <!-- Breadcrumb -->
         <div style="padding: 20px 0; color: var(--text-light); font-size: 14px;">
-            Home > Clothings > Men's wear > Mens Long Sleeve T-shirt
+            <a href="index.html">Home</a> > <a href="categories.html">Clothings</a> > <a href="products.html">Men's wear</a> > <span>Premium Cotton T-Shirt</span>
         </div>
 
         <div class="product-detail-page">
             <!-- Gallery -->
             <div class="product-gallery">
-                <div class="main-image" id="mainImage">
-                    👕
+                <div class="main-image">
+                    <img id="mainImgNode" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80" alt="Main Product">
                 </div>
                 <div class="thumbnail-list">
-                    <div class="thumbnail active" onclick="changeImage(this, '👕')">👕</div>
-                    <div class="thumbnail" onclick="changeImage(this, '👕 (Blue)')">👕</div>
-                    <div class="thumbnail" onclick="changeImage(this, '👕 (Red)')">👕</div>
-                    <div class="thumbnail" onclick="changeImage(this, '👕 (Back)')">👕</div>
+                    <div class="thumbnail active" onclick="changeProductImage(this, 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80')">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200&q=80" alt="Thumb 1">
+                    </div>
+                    <div class="thumbnail" onclick="changeProductImage(this, 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80')">
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=200&q=80" alt="Thumb 2">
+                    </div>
+                    <div class="thumbnail" onclick="changeProductImage(this, 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80')">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=200&q=80" alt="Thumb 3">
+                    </div>
                 </div>
             </div>
 
             <!-- Product Info -->
             <div class="product-info-block">
-                <div class="brand-name">In stock</div>
-                <h1 class="detail-title">Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</h1>
+                <div class="brand-name" style="color:var(--success);">● In stock</div>
+                <h1 class="detail-title">Premium Cotton T-Shirt with Multiple Colors</h1>
                 <div class="detail-rating">
-                    ★★★★★ <span>9.3 • 32 reviews • 154 sold</span>
+                    ★★★★★ <span>4.8 • 154 reviews • 300+ sold</span>
                 </div>
                 
                 <div class="detail-price-box">
-                    <div class="detail-price">$98.00 <span class="detail-old-price">$120.00</span></div>
-                    <div style="font-size: 14px; margin-top: 5px;">50-100 pcs</div>
+                    <div class="detail-price">$10.30 <span class="detail-old-price">$15.00</span></div>
+                    <div style="font-size: 14px; margin-top: 5px; color: var(--text-light);">Incl. taxes</div>
                 </div>
 
                 <div class="options-group">
@@ -103,6 +121,7 @@
                             <div class="dropdown-item" onclick="selectOption('size', 'Small')">Small</div>
                             <div class="dropdown-item" onclick="selectOption('size', 'Medium')">Medium</div>
                             <div class="dropdown-item" onclick="selectOption('size', 'Large')">Large</div>
+                            <div class="dropdown-item" onclick="selectOption('size', 'X-Large')">X-Large</div>
                         </div>
                     </div>
                 </div>
@@ -117,8 +136,11 @@
                 </div>
 
                 <div class="detail-actions">
-                    <button class="btn-primary" onclick="alert('Added to cart!')">Send inquiry</button>
-                    <button class="btn-secondary" onclick="alert('Saved for later!')">♡ Save for later</button>
+                    <button class="btn-primary" onclick="window.location='cart.html'">Add to Cart</button>
+                    <button class="btn-secondary" onclick="window.location='checkout.html'">Buy Now</button>
+                </div>
+                <div style="margin-top:15px;text-align:center;">
+                    <a href="#" style="color:var(--text-light); text-decoration:underline;">+ Add to Wishlist</a>
                 </div>
             </div>
         </div>
@@ -127,28 +149,90 @@
         <div class="detail-tabs">
             <div class="tabs-header">
                 <button class="tab-btn active">Description</button>
-                <button class="tab-btn">Reviews</button>
-                <button class="tab-btn">Shipping</button>
-                <button class="tab-btn">About seller</button>
+                <button class="tab-btn">Specifications</button>
+                <button class="tab-btn">Reviews (154)</button>
+                <button class="tab-btn">Shipping Information</button>
             </div>
             <div class="tab-content">
-                <p style="margin-bottom: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <h3 style="margin-bottom:15px;">Product Overview</h3>
+                <p style="margin-bottom: 15px; color: var(--text-light);">This premium cotton t-shirt is designed for comfort and durability. Whether you are hitting the gym or just lounging around, this t-shirt provides a soft and breathable fit. Available in multiple colors and sizes.</p>
                 <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-light);">
-                    <li>Some great feature name here</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur</li>
-                    <li>Duis aute irure dolor in reprehenderit</li>
+                    <li>100% Organic Cotton</li>
+                    <li>Pre-shrunk to minimize shrinkage</li>
+                    <li>Double-needle stitched neckline and sleeves</li>
+                    <li>Machine washable</li>
                 </ul>
             </div>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
+                <!-- Brand Col -->
                 <div class="footer-brand">
-                    <h3>Brand</h3>
-                    <p>Best information about the company goes here.</p>
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+                        </svg>
+                        Brand
+                    </h3>
+                    <p>We provide the best products from top suppliers directly to your door. Experience modern shopping today.</p>
+                    <div class="social-icons">
+                        <a href="#">F</a>
+                        <a href="#">T</a>
+                        <a href="#">I</a>
+                    </div>
                 </div>
+                
+                <!-- Links Col -->
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Col -->
+                <div class="footer-col">
+                    <h4>Partnership</h4>
+                    <ul>
+                        <li><a href="#">Sell on Brand</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Influencer Network</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Col -->
+                <div class="footer-col">
+                    <h4>Help Center</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Money Refund</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Col -->
+                <div class="footer-col">
+                    <h4>Newsletter Subscription</h4>
+                    <p style="color:#9ca3af; font-size:14px;">Get daily news on upcoming offers!</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                        <input type="email" placeholder="Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                &copy; 2026 Brand eCommerce. All rights reserved.
             </div>
         </div>
     </footer>

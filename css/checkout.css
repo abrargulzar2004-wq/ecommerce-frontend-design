@@ -1,0 +1,118 @@
+/* =========================================
+   CHECKOUT PAGE STYLES
+   ========================================= */
+
+.checkout-page {
+  padding: 40px 0;
+  display: flex;
+  gap: 30px;
+}
+
+.checkout-form {
+  flex: 2;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+}
+
+.checkout-summary {
+  flex: 1;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color var(--transition-speed);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+  border-color: var(--primary-color);
+}
+
+.payment-method {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.payment-method:hover {
+  background-color: var(--bg-light);
+}
+
+.place-order-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: var(--success);
+  color: var(--white);
+  padding: 15px;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+.place-order-btn:hover {
+  background-color: #059669; /* darker success color */
+}
+
+@media (max-width: 768px) {
+  .checkout-page {
+    flex-direction: column-reverse;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

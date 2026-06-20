@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand eCommerce - Cart</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+
+    <div class="header-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="mobile-menu-toggle" id="mobileMenuBtn">☰</div>
+                <a href="index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24">
+                        <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+                    </svg>
+                    Brand
+                </a>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for items...">
+                    <button type="button" id="searchBtn">Search</button>
+                </div>
+                <div class="header-actions">
+                    <a href="#" class="action-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#" class="action-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H5.17L4 17.17V4h14v12z"/></svg>
+                        <span>Message</span>
+                    </a>
+                    <a href="cart.html" class="action-item" style="color:var(--primary-color);">
+                        <div style="position: relative;">
+                            <svg viewBox="0 0 24 24" style="fill:var(--primary-color);"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                            <span class="cart-badge">3</span>
+                        </div>
+                        <span>My cart</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar" id="mainNav">
+            <div class="container">
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="products.html" class="nav-link">Hot offers</a>
+                <a href="products.html" class="nav-link">Gift boxes</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+                <a href="#" class="nav-link">Help Center</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div style="padding: 20px 0; color: var(--text-light); font-size: 14px;">
+            <a href="index.html">Home</a> > <span>Shopping Cart</span>
+        </div>        <div class="cart-page">
+            <div class="cart-items">
+                <h2 class="cart-title" id="cartCountTitle">Your Cart (0 items)</h2>
+                <div id="cartItemsList">
+                    <!-- Cart items rendered here via JS -->
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <h2 class="cart-title" style="font-size:20px;">Order Summary</h2>
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="subtotalPrice">$0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Shipping</span>
+                    <span id="shippingPrice">$0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Tax</span>
+                    <span id="taxPrice">$0.00</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="totalPrice">$0.00</span>
+                </div>
+                <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+                <a href="products.html" style="display:block; text-align:center; margin-top:15px; color:var(--accent-color);">Continue Shopping</a>
+            </div>
+        </div>v>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Col -->
+                <div class="footer-brand">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+                        </svg>
+                        Brand
+                    </h3>
+                    <p>We provide the best products from top suppliers directly to your door. Experience modern shopping today.</p>
+                    <div class="social-icons">
+                        <a href="#">F</a>
+                        <a href="#">T</a>
+                        <a href="#">I</a>
+                    </div>
+                </div>
+                <!-- Links Col -->
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="products.html">Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Partnership</h4>
+                    <ul>
+                        <li><a href="#">Sell on Brand</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help Center</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Money Refund</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Brand eCommerce. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

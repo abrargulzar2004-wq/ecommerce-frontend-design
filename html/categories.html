@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand eCommerce - Categories</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css"> <!-- Reusing home grid styles -->
+    <style>
+        .category-header {
+            padding: 40px 0 20px 0;
+            text-align: center;
+        }
+        .category-header h1 {
+            font-size: 28px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+        .category-header p {
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="mobile-menu-toggle" id="mobileMenuBtn">☰</div>
+                <a href="index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24">
+                        <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+                    </svg>
+                    Brand
+                </a>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for items...">
+                    <button type="button" id="searchBtn">Search</button>
+                </div>
+                <div class="header-actions">
+                    <a href="cart.html" class="action-item">
+                        <div style="position: relative;">
+                            <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                            <span class="cart-badge">3</span>
+                        </div>
+                        <span>My cart</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar" id="mainNav">
+            <div class="container">
+                <a href="categories.html" class="nav-link" style="color:var(--primary-color);">Categories</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="products.html" class="nav-link">Hot offers</a>
+            </div>
+        </nav>
+    </div>
+
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div style="padding: 20px 0; color: var(--text-light); font-size: 14px;">
+            <a href="index.html">Home</a> > <span>Categories</span>
+        </div>
+
+        <div class="category-header">
+            <h1>All Categories</h1>
+            <p>Browse through our wide range of product categories.</p>
+        </div>
+
+        <div class="categories-grid" style="margin-bottom:60px;">
+            <a href="products.html" class="category-card">
+                <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=200&q=80" alt="Tech"></div>
+                <div class="category-name">Electronics</div>
+            </a>
+            <a href="products.html" class="category-card">
+                <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&q=80" alt="Clothes"></div>
+                <div class="category-name">Clothing</div>
+            </a>
+            <a href="products.html" class="category-card">
+                <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?w=200&q=80" alt="Furniture"></div>
+                <div class="category-name">Furniture</div>
+            </a>
+            <a href="products.html" class="category-card">
+                <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=200&q=80" alt="Bags"></div>
+                <div class="category-name">Travel Bags</div>
+            </a>
+            <a href="products.html" class="category-card">
+                <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=200&q=80" alt="Accessories"></div>
+                <div class="category-name">Accessories</div>
+            </a>
+            <a href="products.html" class="category-card">
+                <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1585515320310-259814833e62?w=200&q=80" alt="Appliances"></div>
+                <div class="category-name">Appliances</div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                &copy; 2026 Brand eCommerce. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
