@@ -51,10 +51,10 @@
 
 body {
   font-family: var(--font-family);
-  background-color: var(--bg-main);
+  background-color: var(--bg-main); /* A professional, warm off-white background */
   color: var(--text-dark);
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 20px; /* Increased from 18px */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -106,7 +106,7 @@ img {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 700;
   color: var(--accent-color);
   display: flex;
@@ -216,7 +216,7 @@ img {
 .nav-link {
   color: var(--primary-color);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 24px; /* Increased from 20px */
   position: relative;
 }
 

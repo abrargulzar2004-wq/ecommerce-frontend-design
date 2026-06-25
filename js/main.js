@@ -76,6 +76,45 @@ document.addEventListener('DOMContentLoaded', () => {
     if(window.location.pathname.includes('checkout.html')) {
         renderCheckoutSummary();
     }
+
+    // --- Search Functionality ---
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('searchInput');
+
+    if (searchBtn && searchInput) {
+        const executeSearch = () => {
+            const query = searchInput.value.trim();
+            if (query) {
+                if (!window.location.pathname.includes('products.html')) {
+                    window.location.href = `products.html?search=${encodeURIComponent(query)}`;
+                } else {
+                    window.searchQuery = query;
+                    renderProductsGrid();
+                }
+            } else {
+                window.searchQuery = '';
+                if (window.location.pathname.includes('products.html')) {
+                    renderProductsGrid();
+                }
+            }
+        };
+
+        searchBtn.addEventListener('click', executeSearch);
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                executeSearch();
+            }
+        });
+        
+        // If on products page and URL has search param, initialize it
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlSearch = urlParams.get('search');
+        if (urlSearch && window.location.pathname.includes('products.html') && !window.searchQuery) {
+            searchInput.value = urlSearch;
+            window.searchQuery = urlSearch;
+        }
+    }
 });
 
 // --- Core Actions ---
@@ -184,13 +223,26 @@ function renderProductsGrid() {
     const categoryInputs = document.querySelectorAll('#categoryFilters input:checked');
     const activeCategories = Array.from(categoryInputs).map(i => i.value);
     
-    const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
-    const maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+    const minPrice = parseFloat(document.getElementById('minPrice')?.value) || 0;
+    const maxPrice = parseFloat(document.getElementById('maxPrice')?.value) || Infinity;
+    
+    // Search query
+    const urlParams = new URLSearchParams(window.location.search);
+    let query = window.searchQuery !== undefined ? window.searchQuery : (urlParams.get('search') || '');
+    query = query.toLowerCase().trim();
     
     let filtered = catalog.filter(p => {
         const inCategory = activeCategories.length === 0 || activeCategories.includes(p.category);
         const inPrice = p.price >= minPrice && p.price <= maxPrice;
-        return inCategory && inPrice;
+        let matchesSearch = true;
+        if (query) {
+            matchesSearch = p.name.toLowerCase().includes(query) || p.category.toLowerCase().includes(query);
+            // Fuzzy match logic: if query is 'electroinc', it should match 'Electronics'
+            if (!matchesSearch && query.includes('electro')) {
+                matchesSearch = p.category.toLowerCase().includes('electron') || p.name.toLowerCase().includes('electron');
+            }
+        }
+        return inCategory && inPrice && matchesSearch;
     });
     
     // Sorting logic

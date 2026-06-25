@@ -24,7 +24,6 @@ This project is a realistic and professional frontend implementation of an eComm
 - **JavaScript interactivity features (`main.js`)**: Added simple interactions including customized dropdowns for product options (Size/Color), search bar mock behavior, and image gallery swapping.
 
 ## GitHub Repository
-[GitHub Repository Link](https://github.com/your-username/ecommerce-frontend-design)
+[GitHub Repository Link]()
 
-## Final Submission Date
-**26th June, 2026**
+

@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand eCommerce - Cart</title>
+    <title>Brand eCommerce - Gift Boxes</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
 
@@ -60,37 +62,68 @@
     <main class="container">
         <!-- Breadcrumb -->
         <div style="padding: 20px 0; color: var(--text-light); font-size: 14px;">
-            <a href="index.html">Home</a> > <span>Shopping Cart</span>
-        </div>        <div class="cart-page">
-            <div class="cart-items">
-                <h2 class="cart-title" id="cartCountTitle">Your Cart (0 items)</h2>
-                <div id="cartItemsList">
-                    <!-- Cart items rendered here via JS -->
+            <a href="index.html">Home</a> > <span>Gift Boxes</span>
+        </div>
+        
+        <div style="padding: 40px 0; min-height: 400px; text-align: center;">
+            <h1 style="font-size: 32px; margin-bottom: 20px;">Premium Gift Boxes</h1>
+            <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 30px;">
+                Surprise your loved ones with our beautifully curated gift boxes, perfect for any occasion!
+            </p>
+            <div class="products-grid" style="text-align: left;">
+                <div class="product-card" data-id="gb1" data-name="Birthday Special Box" data-price="45.00" data-img="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=300&q=80" alt="Birthday Special">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
+                    <div class="product-info">
+                        <div class="product-price">$45.00</div>
+                        <a href="product-detail.html" class="product-title" style="font-size: 18px; margin-bottom: 5px;">Birthday Special Box</a>
+                        <p style="color: var(--text-light); font-size: 14px; margin-bottom: 15px;">Includes assorted chocolates and a custom card.</p>
+                        <button class="add-to-cart-btn" onclick="addToCart('gb1')">Add to Cart</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="cart-summary">
-                <h2 class="cart-title" style="font-size:20px;">Order Summary</h2>
-                <div class="summary-line">
-                    <span>Subtotal</span>
-                    <span id="subtotalPrice">$0.00</span>
+                <div class="product-card" data-id="gb2" data-name="Anniversary Box" data-price="75.00" data-img="https://images.unsplash.com/photo-1581022295087-35e593704911?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581022295087-35e593704911?w=300&q=80" alt="Anniversary Box">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
+                    <div class="product-info">
+                        <div class="product-price">$75.00</div>
+                        <a href="product-detail.html" class="product-title" style="font-size: 18px; margin-bottom: 5px;">Anniversary Box</a>
+                        <p style="color: var(--text-light); font-size: 14px; margin-bottom: 15px;">A luxurious collection of scented candles and wine.</p>
+                        <button class="add-to-cart-btn" onclick="addToCart('gb2')">Add to Cart</button>
+                    </div>
                 </div>
-                <div class="summary-line">
-                    <span>Shipping</span>
-                    <span id="shippingPrice">$0.00</span>
+                
+                <div class="product-card" data-id="gb3" data-name="Corporate Gift Set" data-price="120.00" data-img="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=300&q=80" alt="Corporate Gift Set">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
+                    <div class="product-info">
+                        <div class="product-price">$120.00</div>
+                        <a href="product-detail.html" class="product-title" style="font-size: 18px; margin-bottom: 5px;">Corporate Gift Set</a>
+                        <p style="color: var(--text-light); font-size: 14px; margin-bottom: 15px;">Premium notebooks, pen, and coffee for professionals.</p>
+                        <button class="add-to-cart-btn" onclick="addToCart('gb3')">Add to Cart</button>
+                    </div>
                 </div>
-                <div class="summary-line">
-                    <span>Tax</span>
-                    <span id="taxPrice">$0.00</span>
+
+                <div class="product-card" data-id="gb4" data-name="Spa Day Box" data-price="60.00" data-img="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=300&q=80">
+                    <a href="product-detail.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=300&q=80" alt="Spa Day Box">
+                        <div class="wishlist-btn" onclick="toggleWishlist(event, this)">♡</div>
+                    </a>
+                    <div class="product-info">
+                        <div class="product-price">$60.00</div>
+                        <a href="product-detail.html" class="product-title" style="font-size: 18px; margin-bottom: 5px;">Spa Day Box</a>
+                        <p style="color: var(--text-light); font-size: 14px; margin-bottom: 15px;">Bath bombs, body scrub, and relaxing essential oils.</p>
+                        <button class="add-to-cart-btn" onclick="addToCart('gb4')">Add to Cart</button>
+                    </div>
                 </div>
-                <div class="summary-total">
-                    <span>Total</span>
-                    <span id="totalPrice">$0.00</span>
-                </div>
-                <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
-                <a href="products.html" style="display:block; text-align:center; margin-top:15px; color:var(--accent-color);">Continue Shopping</a>
             </div>
-        </div>v>
+        </div>
     </main>
 
     <!-- Footer -->
